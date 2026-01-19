@@ -136,8 +136,13 @@ def generator_page(doc_type):
     st.info("Lengkapi formulir di bawah ini, AI akan membantu menyusun dokumen Anda.")
 
     # --- API KEY INPUT (Penting untuk Streamlit Cloud) ---
+    # API Key dimasukkan sesuai permintaan user
+    default_api_key = "AIzaSyDaIhYQlmwiGrbVJVqs_FJySdeZnS7UPyY"
+
     with st.expander("🔑 Pengaturan API Key (Google Gemini)", expanded=False):
-        api_key = st.text_input("Masukkan Google Gemini API Key Anda", type="password", help="Dapatkan di aistudio.google.com")
+        # API Key langsung diisi otomatis di kolom input
+        api_key = st.text_input("Masukkan Google Gemini API Key Anda", value=default_api_key, type="password", help="Dapatkan di aistudio.google.com")
+        
         if not api_key:
             # Coba cek st.secrets jika user sudah setting di cloud
             if "GEMINI_API_KEY" in st.secrets:
@@ -417,5 +422,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
