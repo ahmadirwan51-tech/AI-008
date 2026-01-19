@@ -221,7 +221,7 @@ def generator_page(doc_type):
             with st.spinner("Sedang meracik dokumen pendidikan..."):
                 try:
                     genai.configure(api_key=api_key)
-                    model = genai.GenerativeModel('gemini-1.5-flash')
+                    model = genai.GenerativeModel('gemini-pro')
                     
                     # KONSTRUKSI PROMPT
                     teacher_info = f"Guru: {st.session_state.user['name']}, Sekolah: {st.session_state.user['school']}"
@@ -417,3 +417,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
