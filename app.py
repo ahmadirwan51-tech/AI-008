@@ -135,7 +135,7 @@ def generator_page(doc_type):
     st.title(f"✨ Generator {doc_type}")
     st.info("Lengkapi formulir di bawah ini, AI akan membantu menyusun dokumen Anda.")
 
-    # --- API KEY INPUT (Penting untuk Streamlit Cloud) ---
+    # --- API KEY INPUT (default_api_key = "AIzaSyDaIhYQlmwiGrbVJVqs_FJySdeZnS7UPyY") ---
     # API Key dimasukkan sesuai permintaan user
     default_api_key = "AIzaSyDaIhYQlmwiGrbVJVqs_FJySdeZnS7UPyY"
 
@@ -422,3 +422,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
